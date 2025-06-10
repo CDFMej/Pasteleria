@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria Dulce Tentación</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+
+<body>
+  <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <strong>Dulce Tentación</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">Inicio</a>
+        <a class="navbar-item">Pasteles</a>
+        <a class="navbar-item">Nosotros</a>
+        <a class="navbar-item">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Portada -->
+  <section class="hero is-large is-black">
+    <div class="hero-body has-text-centered">
+      <div class="container">
+        <h1 class="title">Dulce Tentación</h1>
+        <h2 class="subtitle">Pasteles artesanales que enamoran</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section class="section container">
+    <h2 class="title has-text-centered mb-5">Nuestros Pasteles</h2>
+    <div class="columns is-variable is-3">
+
+      <!-- Pastel 1 -->
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="img/choco.jpeg" alt="Pastel de chocolate" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Pastel de Chocolate</p>
+            <p>Clásico y delicioso, con capas suaves y cobertura de ganache.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pastel 2 -->
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="img/fresa.jpeg" alt="Pastel de Fresa" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Pastel de Fresa</p>
+            <p>Relleno cremoso de fresas frescas y crema chantilly.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pastel 3 -->
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="img/zana.jpeg" alt="Pastel de Zanahoria" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Pastel de Zanahoria</p>
+            <p>Textura esponjosa y sabor especiado, con glaseado de queso crema.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2025 Dulce Tentación. Todos los derechos reservados. Síguenos en:
+        <a href="#">Instagram</a> | <a href="#">Facebook</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script menú hamburguesa -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
